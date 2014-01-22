@@ -15,14 +15,21 @@ RUN \
   `############################`; \
   `# CUSTOM COMMANDS HERE`; \
   `############################`; \
-  cd /opt; \
+  cd $DIR_CACHE; \
   wget --no-check-certificate http://www.scala-lang.org/files/archive/scala-2.9.3.tgz; \
-  tar -xvf scala-*.tgz; \
-  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.0/shark-0.8.0-bin-cdh4.tgz; \
-  tar -xvf shark-*-bin*.tgz; \
+  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.0/shark-0.8.0-bin-cdh4.tgz;
+
+RUN \
+  DIR_CACHE="/setupfiles/cache/"; \
+  cd $DIR_CACHE; \
+  tar -xvf scala-*.tgz -C /opt; \
+  tar -xvf shark-*-bin*.tgz -C /opt;
+
+RUN \
+  cd /opt; \
   cd shark-*-bin-*; \
   cp shark-0.8.0/conf/shark-env.sh.template shark-0.8.0/conf/shark-env.sh; \
-  mv *.tgz /setupfiles
+  mv *.tgz /setupfiles \
   `############################`; \
   `# CLEANUP`; \
   `############################`; \
