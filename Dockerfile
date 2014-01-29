@@ -7,8 +7,8 @@ RUN \
 
 RUN \
   `# hive / shark`; \
-  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.1-rc0/hive-0.9.0-bin.tgz; \
-  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.1-rc0/shark-0.8.1-bin-cdh4.tar.gz
+  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.1/hive-0.9.0-bin.tgz; \
+  wget --no-check-certificate https://github.com/amplab/shark/releases/download/v0.8.1/shark-0.8.1-bin-cdh4.tar.gz
 
 RUN \
   `# shark 0.8.0`; \
