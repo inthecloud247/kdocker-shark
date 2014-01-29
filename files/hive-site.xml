@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<configuration>
+<!-- WARNING!!! This file is provided for documentation purposes ONLY!     -->
+<!-- WARNING!!! Any changes you make to this file will be ignored by Hive. -->
+<!-- WARNING!!! You must make your changes in hive-site.xml instead.       -->
+
+
+<!-- Hive Execution Parameters -->
+
+<property>
+  <name>hive.exec.compress.output</name>
+  <value>true</value>
+  <description> This controls whether the final outputs of a query (to a local/hdfs file or a hive table) is compressed. The compression codec and other options are determined from hadoop config variables mapred.output.compress* </description>
+</property>
+
+<property>
+  <name>hive.exec.parallel</name>
+  <value>true</value>
+  <description>Whether to execute jobs in parallel</description>
+</property>
+
+<property>
+  <name>hive.exec.parallel.thread.number</name>
+  <value>16</value>
+  <description>How many jobs at most can be executed in parallel</description>
+</property>
+
+<property>
+  <name>hive.exec.reducers.bytes.per.reducer</name>
+  <value>100000000</value>
+  <description>size per reducer.The default is 1G, i.e if the input size is 10G, it will use 10 reducers.</description>
+</property>
+
+<property>
+  <name>hive.mapred.job.tracker</name>
+  <value>local</value>
+  <description>use local tracker</description>
+</property>
+</configuration>
+
+<property>
+  <name>hive.mapred.local.mem</name>
+  <value>10000000</value>
+  <description>For local mode, memory of the mappers/reducers
+  </description>
+</property>
+</configuration>
