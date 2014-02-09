@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+docker build -rm -t=inthecloud247/kdocker-shark:latest $DIR/.

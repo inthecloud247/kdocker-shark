@@ -61,4 +61,4 @@ export SHARK_MASTER_MEM=4g
 export SCALA_HOME=/opt/scala-2.9.3
 export HIVE_HOME="/opt/hive-0.9.0-shark-0.8.0-bin"
 #export HIVE_HOME=/opt/hive-0.9.0-bin
-export SPARK_WORKER_MEMORY=3g
+export SPARK_WORKER_MEMORY=4g

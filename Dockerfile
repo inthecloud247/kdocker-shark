@@ -30,8 +30,8 @@ RUN \
   tar xvf /files/shark-0.8.1*.*gz -C /opt/; \
   tar xvf /files/hive-*.*gz -C /opt/; \
   tar xvf /files/scala-*.*gz -C /opt/; \
-  cp -v /files/shark-env-8GB.sh /opt/shark-0.8.0/conf/shark-env.sh; \
-  cp -v /files/shark-env-8GB.sh /opt/shark-0.8.1-bin-cdh4/conf/shark-env.sh; \
+  cp -v /files/shark-env-4GB.sh /opt/shark-0.8.0/conf/shark-env.sh; \
+  cp -v /files/shark-env-4GB.sh /opt/shark-0.8.1-bin-cdh4/conf/shark-env.sh; \
   cp -v /files/sharkserver*.conf /etc/supervisor/conf.d/; \
   mkdir -vp /data/warehouse; \
   chmod 0777 /data/warehouse; \
